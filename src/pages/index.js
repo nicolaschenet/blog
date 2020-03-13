@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Bio from '../components/bio'
 import Button from '../components/button'
+
+const Greetings = styled.h1`
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: solid 1px #eee;
+`
 
 class IndexPage extends React.Component {
     render() {
@@ -21,12 +28,12 @@ class IndexPage extends React.Component {
                     title="Home"
                     keywords={[`blog`, `gatsby`, `javascript`, `react`]}
                 />
-                <h2>
+                <Greetings>
                     Hey people{' '}
                     <span role="img" aria-label="wave emoji">
                         👋
                     </span>
-                </h2>
+                </Greetings>
                 <p>
                     {' '}
                     My name is <strong>Nicolas Chenet</strong>, and I 'm working
