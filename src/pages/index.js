@@ -8,8 +8,8 @@ import Bio from '../components/bio'
 import Button from '../components/button'
 
 const Greetings = styled.h1`
-    padding-bottom: 50px;
-    margin-bottom: 50px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
     border-bottom: solid 1px #eee;
 `
 
