@@ -6,4 +6,4 @@ description: This is just a test
 ---
 This is my very blog post via **Netlify CMS**, published through **Github**.
 
-It honnestly took 5 minutes to set up the whole thing! Amazing <3
+It honestly took 5 minutes to set up the whole thing! Amazing <3
