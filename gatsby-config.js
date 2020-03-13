@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `Blog`,
+    title: `Tech thoughts`,
     author: `Nicolas Chenet`,
     description: `Just thoughts`,
     siteUrl: `https://adoring-lumiere-60e84d.netlify.com/`,
