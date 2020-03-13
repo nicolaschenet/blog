@@ -34,7 +34,7 @@ const Bio = () => (
                     />{' '}
                     <p>
                         Written by <strong> {author} </strong> who lives and
-                        works in New York City for{' '}
+                        works in Paris for{' '}
                         <a
                             href="https://www.datadoghq.com"
                             target="_blank"
