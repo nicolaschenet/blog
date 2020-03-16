@@ -13,5 +13,14 @@
       "service": "twitter",
       "url": "twitter.com/nicolaschenet"
     }
+  ],
+  "experience": [
+    {
+      "start": "06/2019",
+      "end": "",
+      "role": "Frontend Engineer",
+      "company": "Datadog",
+      "description": "..."
+    }
   ]
 }
