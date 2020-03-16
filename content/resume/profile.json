@@ -7,5 +7,11 @@
     "email": "contact@nicolaschenet.dev",
     "website": "nicolaschenet.dev",
     "location": "Paris"
-  }
+  },
+  "social": [
+    {
+      "service": "twitter",
+      "url": "twitter.com/nicolaschenet"
+    }
+  ]
 }
