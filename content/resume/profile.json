@@ -20,21 +20,25 @@
       "end": "",
       "role": "Frontend Engineer",
       "company": "Datadog",
-      "description": " "
+      "description": " ",
+      "logo": "assets/datadog.png"
     },
     {
       "start": "08/2016",
       "end": "06/2019",
       "role": "Senior Javascript Developer",
       "company": "Oyst",
-      "description": "React <3 / Redux / Webpack / ES6-7 ... What else ?"
+      "description": "React <3 / Redux / Webpack / ES6-7 ... What else ?",
+      "logo": "assets/oyst.png"
     },
     {
       "start": "07/2013",
       "end": "08/2016",
       "role": "Javascript Developer",
       "company": "Wisembly",
-      "description": " "
+      "description": " ",
+      "logo": "assets/wisembly.png"
     }
-  ]
+  ],
+  "sidebar": []
 }
