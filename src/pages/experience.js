@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import resume from '../../content/resume/profile.json'
+
 /** Component */
 export default ({ data, location }) => {
     const {
@@ -12,10 +14,11 @@ export default ({ data, location }) => {
             siteMetadata: { title },
         },
     } = data
+    console.log({ resume })
     return (
         <Layout location={location} title={title}>
             <SEO title="CV" />
-            CV
+            Here comes the CV...
         </Layout>
     )
 }

@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Nicolas Chenet | Frontend Engineer`,
+        title: `Frontend Engineered`,
         author: `Nicolas Chenet`,
-        description: `Personal website`,
+        description: `Nicolas Chenet's personal website. Experience, skills, talking about Frontend stuff, mostly React.`,
         siteUrl: `https://nicolaschenet.dev`,
         social: {
             twitter: `nicolaschenet`,

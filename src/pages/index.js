@@ -7,67 +7,84 @@ import SEO from '../components/seo'
 import Bio from '../components/bio'
 import Button from '../components/button'
 
-const Greetings = styled.h1`
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    border-bottom: solid 1px #eee;
+import { rhythm } from '../utils/typography'
+
+const Shortcuts = styled.div`
+    margin-top: ${rhythm(2)};
 `
 
-class IndexPage extends React.Component {
-    render() {
-        const { data } = this.props
-        const { siteMetadata } = data.site
-        const {
-            title,
-            social: { twitter },
-        } = siteMetadata
+const Shortcut = styled(Link)`
+    display: block;
+    margin-bottom: ${rhythm(1 / 2)};
 
-        return (
-            <Layout location={this.props.location} title={title}>
-                <SEO
-                    title="Home"
-                    keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-                />
-                <Greetings>
-                    Hey people{' '}
-                    <span role="img" aria-label="wave emoji">
-                        👋
-                    </span>
-                </Greetings>
-                <p>
-                    {' '}
-                    My name is <strong>Nicolas Chenet</strong>, and I 'm working
-                    as a <strong>Frontend Engineer</strong> at{' '}
-                    <a
-                        href="https://www.datadoghq.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Datadog
-                    </a>
-                    .
-                </p>
-                <p>
-                    I publish here some random tech thoughts, which could
-                    eventually be considered as "articles".
-                </p>
-                <p>
-                    In case you like what I write, you might want to{' '}
-                    <a
-                        href={`https://twitter.com/${twitter}`}
-                        rel="noopener noreferrer"
-                    >
-                        follow me on Twitter
-                    </a>
-                    .
-                </p>
-
-                <Link to="/blog/">
-                    <Button marginTop="100px">Go to Blog</Button>
-                </Link>
-            </Layout>
-        )
+    &:last-child {
+        margin: 0;
     }
+`
+
+const IndexPage = ({ data, location }) => {
+    const { siteMetadata } = data.site
+    const {
+        author,
+        title,
+        social: { twitter },
+    } = siteMetadata
+
+    return (
+        <Layout location={location} title={title}>
+            <SEO
+                title="Home"
+                keywords={[
+                    'blog',
+                    'gatsby',
+                    'javascript',
+                    'react',
+                    'nicolas chenet',
+                ]}
+            />
+            <h2>
+                Hey people{' '}
+                <span role="img" aria-label="wave emoji">
+                    👋
+                </span>
+            </h2>
+            <p>
+                My name is <strong>{author}</strong>, and I 'm working as a{' '}
+                <strong>Frontend Engineer</strong> at{' '}
+                <a
+                    href="https://www.datadoghq.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Datadog
+                </a>
+                .
+            </p>
+            <p>
+                I publish here some random tech thoughts, which could eventually
+                be considered as "articles".
+            </p>
+            <p>
+                In case you like what I write, you might want to{' '}
+                <a
+                    href={`https://twitter.com/${twitter}`}
+                    rel="noopener noreferrer"
+                >
+                    follow me on Twitter
+                </a>
+                .
+            </p>
+            <Shortcuts>
+                <h2>What now? </h2>
+                <Shortcut to="/experience/">
+                    <Button>See my experience</Button>
+                </Shortcut>
+                <Shortcut to="/blog/">
+                    <Button>Read some interesting stuff in the blog</Button>
+                </Shortcut>
+            </Shortcuts>
+        </Layout>
+    )
 }
 
 export default IndexPage
@@ -76,6 +93,7 @@ export const pageQuery = graphql`
     query {
         site {
             siteMetadata {
+                author
                 title
                 social {
                     twitter
