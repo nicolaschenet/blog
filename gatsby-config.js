@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
-        title: `Tech thoughts`,
+        title: `Nicolas Chenet | Frontend Engineer`,
         author: `Nicolas Chenet`,
-        description: `Just thoughts`,
-        siteUrl: `https://adoring-lumiere-60e84d.netlify.com/`,
+        description: `Personal website`,
+        siteUrl: `https://nicolaschenet.dev`,
         social: {
             twitter: `nicolaschenet`,
         },
@@ -69,15 +69,14 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                // edit below
                 trackingId: `UA-160631327-1`,
             },
         },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Blog`,
-                short_name: `Blog`,
+                name: `Nicolas Chenet | Frontend Engineer`,
+                short_name: `Nicolas Chenet | Frontend Engineer`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
