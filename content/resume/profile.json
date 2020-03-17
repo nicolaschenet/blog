@@ -1,7 +1,7 @@
 {
   "fullname": "Nicolas Chenet",
   "role": "Frontend Engineer",
-  "summary": "...",
+  "summary": "Frontend engineer at Datadog / Current keywords: #react #react-native #hooks #graphql",
   "contact": {
     "phone": "+33695902986",
     "email": "contact@nicolaschenet.dev",
@@ -20,7 +20,21 @@
       "end": "",
       "role": "Frontend Engineer",
       "company": "Datadog",
-      "description": "..."
+      "description": " "
+    },
+    {
+      "start": "08/2016",
+      "end": "06/2019",
+      "role": "Senior Javascript Developer",
+      "company": "Oyst",
+      "description": "React <3 / Redux / Webpack / ES6-7 ... What else ?"
+    },
+    {
+      "start": "07/2013",
+      "end": "08/2016",
+      "role": "Javascript Developer",
+      "company": "Wisembly",
+      "description": " "
     }
   ]
 }
