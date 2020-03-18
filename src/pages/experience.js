@@ -97,7 +97,11 @@ const Title = styled.div`
 
 const ExperienceItem = styled.div`
     padding: ${rhythm(1.5)} 0;
-
+    transition: transform 0.2s;
+    transform-origin: left;
+    &:hover {
+        transform: scale(1.05);
+    }
     &:first-child {
         padding-top: 0;
     }
