@@ -67,13 +67,14 @@ export default ({ data, location }) => {
 const Wrapper = styled.div`
     position: relative;
     flex: 1;
+    padding-bottom: 50px;
 
     &::before {
         content: '';
         position: absolute;
         top: ${rhythm(1.5)};
         left: calc(1px + 18px);
-        height: 100%;
+        height: calc(100% - 50px);
         border-left: solid #f0f0f0 2px;
     }
 `

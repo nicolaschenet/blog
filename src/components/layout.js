@@ -10,18 +10,18 @@ class Layout extends React.Component {
     render() {
         const { title, children } = this.props
         return (
-            <Wrapper>
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '100%',
-                        marginLeft: `auto`,
-                        marginRight: `auto`,
-                        maxWidth: rhythm(24),
-                        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-                    }}
-                >
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    marginLeft: `auto`,
+                    marginRight: `auto`,
+                    maxWidth: rhythm(24),
+                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+                }}
+            >
+                <Wrapper>
                     <header>
                         <h1
                             style={{
@@ -51,12 +51,13 @@ class Layout extends React.Component {
                     >
                         {children}
                     </main>
-                </div>
-                <Footer>
-                    ©{new Date().getFullYear()}, Built with
-                    <a href="https://www.gatsbyjs.org"> Gatsby </a>
-                </Footer>
-            </Wrapper>
+
+                    <Footer>
+                        ©{new Date().getFullYear()}, Built with
+                        <a href="https://www.gatsbyjs.org"> Gatsby </a>
+                    </Footer>
+                </Wrapper>
+            </div>
         )
     }
 }
