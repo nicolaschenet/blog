@@ -1,19 +1,48 @@
 {
-  "fullname": "Nicolas Chenet",
-  "role": "Frontend Engineer",
-  "summary": "Frontend engineer at Datadog / Current keywords: #react #react-native #hooks #graphql",
   "contact": {
     "phone": "+33695902986",
     "email": "contact@nicolaschenet.dev",
     "website": "nicolaschenet.dev",
     "location": "Paris"
   },
-  "social": [
+  "skills": [
     {
-      "service": "twitter",
-      "url": "twitter.com/nicolaschenet"
+      "title": "React.js",
+      "type": "tag",
+      "subskills": [
+        {
+          "name": "React",
+          "percent": 100
+        }
+      ]
+    },
+    {
+      "title": "Redux",
+      "type": "tag"
+    },
+    {
+      "title": "Javascript",
+      "type": "tag"
+    },
+    {
+      "title": "Unit testing",
+      "type": "tag"
+    },
+    {
+      "title": "Typescript",
+      "type": "tag"
+    },
+    {
+      "title": "HTML",
+      "type": "tag"
+    },
+    {
+      "title": "CSS",
+      "type": "tag"
     }
   ],
+  "summary": "Frontend engineer at Datadog / Current keywords: #react #react-native #hooks #graphql",
+  "education": [],
   "experience": [
     {
       "start": "06/2019",
@@ -40,5 +69,13 @@
       "logo": "assets/wisembly.png"
     }
   ],
+  "social": [
+    {
+      "service": "twitter",
+      "url": "twitter.com/nicolaschenet"
+    }
+  ],
+  "role": "Frontend Engineer",
+  "fullname": "Nicolas Chenet",
   "sidebar": []
 }
