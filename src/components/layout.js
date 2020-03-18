@@ -18,7 +18,9 @@ class Layout extends React.Component {
                     marginLeft: `auto`,
                     marginRight: `auto`,
                     maxWidth: rhythm(24),
-                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)} 0 ${rhythm(
+                        3 / 4
+                    )}`,
                 }}
             >
                 <Wrapper>
@@ -63,8 +65,8 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-    height: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
 `
@@ -73,7 +75,7 @@ const Footer = styled.footer`
     text-align: center;
     font-size: ${footerTypographyScale.fontSize};
     line-height: ${footerTypographyScale.lineHeight};
-    margin: ${rhythm(1 / 2)};
+    margin: ${rhythm(1)} 0 ${rhythm(1 / 2)} 0;
 `
 
 export default Layout
