@@ -85,12 +85,6 @@ collections:
                       - { label: Role, name: role, widget: string }
                       - { label: Company, name: company, widget: string }
                       - {
-                            label: Logo,
-                            name: logo,
-                            widget: image,
-                            required: false,
-                        }
-                      - {
                             label: Description,
                             name: description,
                             widget: text,
