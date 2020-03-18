@@ -1,2 +1,5 @@
-// custom typefaces
-import "typeface-source-sans-pro"
+// Global styles
+import './src/styles/global.css'
+
+// Custom typefaces
+import 'typeface-source-sans-pro'

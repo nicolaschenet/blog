@@ -8,11 +8,14 @@ import Navigation from './Navigation'
 
 class Layout extends React.Component {
     render() {
-        const { location, title, children } = this.props
+        const { title, children } = this.props
         return (
             <Wrapper>
                 <div
                     style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
                         marginLeft: `auto`,
                         marginRight: `auto`,
                         maxWidth: rhythm(24),
@@ -23,8 +26,7 @@ class Layout extends React.Component {
                         <h1
                             style={{
                                 ...scale(1),
-                                marginBottom: rhythm(1),
-                                marginTop: 0,
+                                margin: 0,
                             }}
                         >
                             <Link
@@ -40,7 +42,15 @@ class Layout extends React.Component {
                         </h1>
                     </header>
                     <Navigation />
-                    <main>{children}</main>
+                    <main
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            flex: 1,
+                        }}
+                    >
+                        {children}
+                    </main>
                 </div>
                 <Footer>
                     ©{new Date().getFullYear()}, Built with
@@ -52,7 +62,7 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

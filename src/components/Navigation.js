@@ -2,18 +2,16 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import { rhythm, scale } from '../utils/typography'
-import { NAVIGATION_TEXT, LINK, LINK_HOVER } from '../utils/ui-colors'
+import { LINK, LINK_HOVER } from '../utils/ui-colors'
 import { Link } from 'gatsby'
 
-const baseTypographyRythm = rhythm(1)
 const baseTypographyScale = scale(-1.5 / 5)
 
 const NavigationWrapper = styled.div`
     display: flex;
-    margin: ${baseTypographyRythm} 0;
+    margin: ${rhythm(1)} 0 ${rhythm(2)} 0;
     font-size: ${baseTypographyScale.fontSize};
     line-height: ${baseTypographyScale.lineHeight};
-    color: ${NAVIGATION_TEXT};
 
     & a {
         margin-right: ${rhythm(4 / 5)};
@@ -32,10 +30,10 @@ const Navigation = () => (
         <Link to="/" activeClassName="active">
             Home
         </Link>
-        <Link to="experience/" activeClassName="active">
+        <Link to="/experience/" activeClassName="active">
             Experience
         </Link>
-        <Link to="blog/" activeClassName="active">
+        <Link to="/blog/" activeClassName="active">
             Blog
         </Link>
     </NavigationWrapper>

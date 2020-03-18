@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import {
     BUTTON,
     BUTTON_TEXT,
-    BORDER,
     BUTTON_HOVER,
     BUTTON_TEXT_HOVER,
 } from '../utils/ui-colors'
