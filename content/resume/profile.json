@@ -65,7 +65,7 @@
       "end": "08/2016",
       "role": "Javascript Developer",
       "company": "Wisembly",
-      "description": " It started with Backbone.js, it ended with lots of React, after a quite long EmberJS phase.\n\nParticularly proud of the Solid product I was particularly involved in, as I helped to bootstrap it, and was responsible of its frontend development for almost the whole journey.",
+      "description": "It started with Backbone.js, it ended with lots of React, after a quite long EmberJS phase.\n\nParticularly proud of the Solid product I was particularly involved in, as I helped to bootstrap it, and was responsible of its frontend development for almost the whole journey.",
       "logo": "assets/wisembly.png"
     },
     {
@@ -78,7 +78,8 @@
       "start": "01/2012",
       "end": "10/2012",
       "role": "Frontend Designer",
-      "company": "Wisembly"
+      "company": "Wisembly",
+      "description": "Developping new features inside a custom BackboneJS framework (Backbone Relational + Backbone Layout Manager + custom code)\n\nTechnos: Backbone, node.js (i.e. push server using socket.io), grunt, REST API\n\nDeployment\n\nLAMP + GIT\n\nJS Tests (Mocha-phantomJS)"
     },
     {
       "start": "11/2011",
