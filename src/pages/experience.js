@@ -22,10 +22,13 @@ export default ({ data, location }) => {
     console.log({ resume, imageNodes })
 
     const getCompanyLogo = React.useCallback(company => {
-        const { node } = imageNodes.find(
+        const result = imageNodes.find(
             ({ node }) => node.name === company.toLowerCase()
         )
-        return node.childImageSharp.fixed
+        if (!result) {
+            return {}
+        }
+        return result.node.childImageSharp.fixed
     }, [])
 
     return (
@@ -33,31 +36,32 @@ export default ({ data, location }) => {
             <SEO title="CV" />
             <Wrapper>
                 {resume.experience.map(
-                    ({ start, role, company, description }) => (
-                        <ExperienceItem key={`experience-${start}`}>
-                            <Title>
-                                <Image
-                                    fixed={getCompanyLogo(company)}
-                                    style={{
-                                        marginRight: rhythm(1 / 2),
-                                        minWidth: 40,
-                                        // borderRadius: `40px`,
-                                        background: '#fff',
-                                        // border: 'solid 1px #dedede',
-                                    }}
-                                    imgStyle={{
-                                        // borderRadius: `100%`,
-                                        padding: '5px',
-                                        // padding: '2px',
-                                    }}
-                                />
-                                <Position>
-                                    <strong>{role}</strong> at {company}
-                                </Position>
-                            </Title>
-                            <Description>{description}</Description>
-                        </ExperienceItem>
-                    )
+                    ({ start, role, company, description }) => {
+                        const logoFixed = getCompanyLogo(company)
+                        return (
+                            <ExperienceItem key={`experience-${start}`}>
+                                <Title>
+                                    {logoFixed ? (
+                                        <Image
+                                            fixed={logoFixed}
+                                            style={{
+                                                marginRight: rhythm(1 / 2),
+                                                width: 40,
+                                                background: '#fff',
+                                            }}
+                                            imgStyle={{
+                                                padding: '2px',
+                                            }}
+                                        />
+                                    ) : null}
+                                    <Position>
+                                        <strong>{role}</strong> at {company}
+                                    </Position>
+                                </Title>
+                                <Description>{description}</Description>
+                            </ExperienceItem>
+                        )
+                    }
                 )}
             </Wrapper>
         </Layout>
@@ -85,8 +89,21 @@ const Position = styled.div``
 const descriptionScale = scale(-1 / 5)
 
 const Title = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        height: 8px;
+        width: 8px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1), 0 0 0 1px #eee;
+    }
 
     & ${Position} {
         strong {
@@ -99,8 +116,9 @@ const ExperienceItem = styled.div`
     padding: ${rhythm(1.5)} 0;
     transition: transform 0.2s;
     transform-origin: left;
+
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.05) translateX(-1px);
     }
     &:first-child {
         padding-top: 0;
